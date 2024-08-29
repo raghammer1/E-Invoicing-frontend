@@ -43,11 +43,11 @@
   "scripts": {
     "start": "react-scripts start",
     "start-dev-server": "webpack serve --mode development",
-    "build2": "react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
-    "build": "webpack --mode development",
+    "build2": "webpack --mode production",
     "watch": "webpack --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
