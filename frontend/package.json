@@ -2,10 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=18.16.0 <19",
-    "npm": ">=9.5.1 <10"
-  },
+  "engines": {},
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -50,8 +47,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
-    "preinstall": "check-node-version --node '>=18.16.0 <19' --npm '>=9.5.1 <10'",
-    "postinstall": "node check-versions.js",
     "build": "webpack --mode development",
     "watch": "webpack --watch",
     "storybook": "storybook dev -p 6006",
