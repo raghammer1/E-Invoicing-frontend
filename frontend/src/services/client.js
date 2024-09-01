@@ -4,6 +4,9 @@ import axios from 'axios';
 const apiClient = axios.create({
   baseURL: 'https://e-invoicing-backend.vercel.app', // Base URL for all requests
   // withCredentials: true, // Allow credentials (such as cookies) to be sent with requests
+  headers: {
+    credentials: 'omit',
+  },
 });
 
 // Add an interceptor to handle responses and errors globally
