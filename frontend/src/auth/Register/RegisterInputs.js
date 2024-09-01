@@ -47,6 +47,15 @@ const RegisterInputs = ({ goToDashboard }) => {
 
     setLoading(true);
     const response = await register({ username: name, email, password });
+    if (response && response.data.token) {
+      Cookies.set('token', response.data.token, {
+        expires: 1, // 1 day
+        secure: true, // only if you're on HTTPS
+        sameSite: 'None', // or 'Lax' or 'None'
+        path: '/', // cookie available throughout the site
+      });
+    }
+
     if (response.error) {
       showAlert(
         response.data.error ? response.data.error : "Can't Register",
