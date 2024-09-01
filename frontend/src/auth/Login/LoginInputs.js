@@ -9,6 +9,7 @@ import { useAlert } from '../../components/AlertError';
 import { login } from '../../services/api';
 import useUserStore from '../../zustand/useUserStore';
 import GoogleAuth from '../GoogleAuth';
+import Cookies from 'js-cookie';
 
 // Main component where login happens. All the inputs and the login request are managed here
 const LoginInputs = ({ goToDashboard }) => {
