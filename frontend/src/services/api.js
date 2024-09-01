@@ -250,7 +250,7 @@ const API_KEY = 'ac9b9c9cdde741b99b310610242006';
 export const fetchWeather = async (lat, lon) => {
   try {
     const response = await axios.get(
-      'http://api.weatherapi.com/v1/current.json',
+      'https://api.weatherapi.com/v1/current.json',
       {
         params: {
           key: API_KEY,
