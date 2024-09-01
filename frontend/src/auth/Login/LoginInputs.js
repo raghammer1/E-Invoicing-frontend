@@ -30,6 +30,14 @@ const LoginInputs = ({ goToDashboard }) => {
     setLoading(true);
 
     const response = await login({ email, password });
+    if (response && response.token) {
+      Cookies.set('token', response.token, {
+        expires: 1, // 1 day
+        secure: true, // only if you're on HTTPS
+        sameSite: 'None', // or 'Lax' or 'None'
+        path: '/', // cookie available throughout the site
+      });
+    }
 
     if (response.error) {
       // Show error alert
