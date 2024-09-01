@@ -9,6 +9,7 @@ import { register } from '../../services/api';
 import useUserStore from '../../zustand/useUserStore';
 import Tooltip from '@mui/material/Tooltip';
 import InfoIcon from '@mui/icons-material/Info';
+import Cookies from 'js-cookie';
 import GoogleAuth from '../GoogleAuth';
 
 /** Main component for user registration inputs and handling registration process */
