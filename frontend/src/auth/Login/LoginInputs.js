@@ -31,8 +31,8 @@ const LoginInputs = ({ goToDashboard }) => {
     setLoading(true);
 
     const response = await login({ email, password });
-    if (response && response.token) {
-      Cookies.set('token', response.token, {
+    if (response && response.data.token) {
+      Cookies.set('token', response.data.token, {
         expires: 1, // 1 day
         secure: true, // only if you're on HTTPS
         sameSite: 'None', // or 'Lax' or 'None'
